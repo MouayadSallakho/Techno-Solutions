@@ -1,0 +1,139 @@
+.sceneAosWrap {
+  width: 100%;
+  opacity: 1;
+  transform: none;
+}
+
+.orbitScene {
+  position: relative;
+  width: min(100%, 820px);
+  aspect-ratio: 1.22 / 1;
+  min-height: 540px;
+  isolation: isolate;
+  pointer-events: none;
+  transform: translate3d(0, 0, 0);
+}
+
+.sceneHaze,
+.vortexGlow,
+.vortexShadow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.sceneHazeA {
+  inset: 8% -8% 10% 22%;
+  background: radial-gradient(circle at 50% 50%, rgba(132, 255, 245, 0.05), rgba(132, 255, 245, 0.012) 28%, transparent 62%);
+  filter: blur(34px);
+  opacity: 0.52;
+}
+
+.sceneHazeB {
+  inset: 18% -2% 8% 34%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.008) 28%, transparent 54%);
+  filter: blur(42px);
+  opacity: 0.4;
+}
+
+.vortexGlow {
+  width: 43%;
+  aspect-ratio: 1.08;
+  left: 47.8%;
+  top: 52.8%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 50% 50%, rgba(133, 255, 245, 0.15) 0%, rgba(133, 255, 245, 0.07) 18%, rgba(133, 255, 245, 0.02) 42%, transparent 72%);
+  filter: blur(46px);
+  opacity: 0.82;
+}
+
+.vortexShadow {
+  aspect-ratio: 1.03;
+  left: 37.8%;
+  top: 104%;
+  width: 258px !important;
+  height: 650px !important;
+  transform: translate(-50%, -50%) rotate(23deg);
+}
+
+.vortexShadowImage {
+  width: 177px;
+  height: 180px;
+  transform: rotate(0deg);
+}
+
+.orbitalSvg {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.orbit {
+  fill: none;
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.orbitMain {
+  opacity: 0.94;
+}
+
+.orbitFaint {
+  opacity: 0.62;
+}
+
+.orbitBlur {
+  opacity: 0.26;
+  stroke-width: 1.5;
+}
+
+.orbitBlurLight {
+  opacity: 0.18;
+}
+
+.orbitAccentPath {
+  opacity: 0.24;
+  stroke-width: 0.8;
+}
+
+.orbitIcon {
+  color: rgba(255, 255, 255, 0.98);
+  transform-box: fill-box;
+  transform-origin: center;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.18));
+}
+
+.orbitIconStatic {
+  opacity: 0.9;
+}
+
+.orbitIconMoving {
+  opacity: 1;
+}
+
+@media (max-width: 991.98px) {
+  .orbitScene {
+    min-height: 470px;
+    margin-top: 6px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .orbitScene {
+    margin-top: -140px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .orbitIconOptional {
+    display: none;
+  }
+}
+
+
+
+

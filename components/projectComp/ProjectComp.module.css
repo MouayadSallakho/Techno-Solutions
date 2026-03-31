@@ -1,0 +1,568 @@
+.Project {
+  padding-bottom: 60px;
+  overflow: hidden;
+}
+
+/* =========================
+   TOP ROW
+========================= */
+
+.topRow {
+  margin-bottom: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.contentGroup {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  width: fit-content;
+  max-width: fit-content;
+  flex-shrink: 0;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  padding-top: 12px;
+}
+
+.line {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #2b6cdf;
+  display: block;
+}
+
+.heading p {
+  margin: 0;
+  color: #111111;
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: clamp(14px, 1.4vw, 18px);
+  line-height: 1;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.description {
+  margin: 0;
+  color: #000000;
+  font-weight: 400;
+  font-size: clamp(38px, 4.2vw, 53px);
+  line-height: 1.08;
+  letter-spacing: -1.4px;
+  max-width: 430px;
+}
+
+.btnWrapper {
+  flex-shrink: 0;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.viewAllBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 6px 6px 20px;
+  border-radius: 999px;
+  background: #2f6df6;
+  color: #ffffff;
+  text-decoration: none;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+  box-shadow: 0 10px 25px rgba(47, 109, 246, 0.22);
+}
+
+.viewAllBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(47, 109, 246, 0.28);
+  color: #ffffff;
+}
+
+.viewAllText {
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.arrowCircle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+.viewAllBtn:hover .arrowCircle {
+  transform: rotate(45deg) scale(1.05);
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* =========================
+   LAYOUT SWITCH
+========================= */
+
+.desktopContent {
+  display: block;
+}
+
+.mobileContent {
+  display: none;
+}
+
+.mobileTop {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+/* =========================
+   CARD BASE
+========================= */
+
+.holderInfo {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 24px;
+  transition: transform 0.35s ease;
+}
+
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.imageWrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.14),
+    rgba(0, 0, 0, 0.04),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 1;
+}
+
+.holderInfo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 24px;
+  object-fit: cover;
+  transition:
+    transform 0.6s ease,
+    filter 0.35s ease;
+}
+
+.holderInfo:hover {
+  transform: translateY(-6px);
+}
+
+.holderInfo:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.95);
+}
+
+.holderInfo:hover .imageWrapper::after,
+.holderInfo:hover .mobileImageWrap::after {
+  opacity: 1;
+}
+
+/* =========================
+   INFO ROW
+========================= */
+
+.infoRow {
+  margin-top: 14px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: nowrap;
+}
+
+.infoRow p {
+  margin: 0;
+  color: #111111;
+  font-weight: 400;
+  font-size: clamp(18px, 1.8vw, 28px);
+  line-height: 1.15;
+  transition: color 0.3s ease;
+  flex: 1;
+}
+
+.infoRow span {
+  margin: 0;
+  color: #777777;
+  line-height: 1.4;
+  font-weight: 400;
+  font-size: 14px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding-top: 6px;
+}
+
+.holderInfo:hover .infoRow p {
+  color: #2b6cdf;
+}
+
+/* =========================
+   DESKTOP IMAGE HEIGHTS
+========================= */
+
+.holderInfo1 .imageWrapper,
+.holderInfo2 .imageWrapper,
+.holderInfo3 .imageWrapper {
+  aspect-ratio: 1 / 1.12;
+}
+
+.holderInfo4 .imageWrapper,
+.holderInfo5 .imageWrapper {
+  aspect-ratio: 1 / 0.72;
+}
+
+.holderInfo2 {
+  margin-top: 30px;
+}
+
+.holderInfo3 {
+  margin-top: 60px;
+}
+
+/* =========================
+   MOBILE SWIPER
+========================= */
+
+.swiperWrap {
+  overflow: hidden;
+}
+
+.projectSwiper {
+  overflow: visible !important;
+  padding-bottom: 56px !important;
+}
+
+.projectSwiper :global(.swiper) {
+  direction: inherit;
+}
+
+.projectSwiper :global(.swiper-wrapper) {
+  align-items: stretch;
+}
+
+.projectSwiper :global(.swiper-slide) {
+  height: auto;
+}
+
+.mobileCard {
+  margin-bottom: 0;
+}
+
+.mobileImageWrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+}
+
+.mobileImageWrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.14),
+    rgba(0, 0, 0, 0.04),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 1;
+}
+
+.mobileImageWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mobileCard .infoRow {
+  min-height: 52px;
+}
+
+.mobileCard .infoRow p {
+  font-size: 20px;
+}
+
+.mobileCard .infoRow span {
+  font-size: 14px;
+}
+
+/* =========================
+   CUSTOM PAGINATION
+========================= */
+
+.projectSwiper :global(.swiper-pagination) {
+  position: static !important;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectSwiper
+  :global(.swiper-pagination-bullets.swiper-pagination-horizontal) {
+  width: fit-content;
+  margin-inline: auto;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #e7e7e7;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.projectSwiper :global(.swiper-pagination-bullet) {
+  width: 8px;
+  height: 8px;
+  margin: 0 !important;
+  border-radius: 999px;
+  background: #9b9b9b;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.projectSwiper :global(.swiper-pagination-bullet-active) {
+  width: 24px;
+  background: #5c5c5c;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1199.98px) {
+  .contentGroup {
+    gap: 40px;
+  }
+
+  .description {
+    max-width: 360px;
+  }
+
+  .holderInfo3 {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .Project {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .topRow {
+    display: none;
+  }
+
+  .desktopContent {
+    display: none;
+  }
+
+  .mobileContent {
+    display: block;
+  }
+
+  .description {
+    font-size: clamp(28px, 4.5vw, 42px);
+    max-width: 320px;
+  }
+
+  .heading {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .Project {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .mobileTop {
+    margin-bottom: 24px;
+    gap: 14px;
+  }
+
+  .description {
+    font-size: 28px;
+    line-height: 1.15;
+    letter-spacing: -0.8px;
+    max-width: 260px;
+  }
+
+  .viewAllBtn {
+    padding: 5px 5px 5px 16px;
+  }
+
+  .viewAllText {
+    font-size: 13px;
+  }
+
+  .arrowCircle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mobileCard .infoRow {
+    min-height: 48px;
+  }
+
+  .mobileCard .infoRow p {
+    font-size: 18px;
+  }
+
+  .mobileCard .infoRow span {
+    font-size: 13px;
+    padding-top: 2px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .Project {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .description {
+    font-size: 24px;
+    max-width: 220px;
+  }
+
+  .imageWrapper,
+  .holderInfo img,
+  .mobileImageWrap {
+    border-radius: 20px;
+  }
+
+  .mobileCard .infoRow p {
+    font-size: 17px;
+  }
+
+  .projectSwiper {
+    padding-bottom: 48px !important;
+  }
+}
+
+@media (max-width: 399.98px) {
+  .viewAllBtn {
+    padding-left: 14px;
+  }
+
+  .viewAllText {
+    font-size: 12.5px;
+  }
+
+  .arrowCircle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .description {
+    max-width: 200px;
+  }
+
+  .mobileCard .infoRow {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .mobileCard .infoRow span {
+    width: 100%;
+    padding-top: 0;
+  }
+}
+
+/* =========================
+   RTL
+========================= */
+
+[dir="rtl"] .topRow {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .contentGroup {
+  direction: rtl;
+}
+
+[dir="rtl"] .heading {
+  direction: rtl;
+}
+
+[dir="rtl"] .heading p {
+  text-align: right;
+}
+
+[dir="rtl"] .description {
+  text-align: right;
+}
+
+[dir="rtl"] .infoRow {
+  direction: rtl;
+}
+
+[dir="rtl"] .infoRow p {
+  text-align: right;
+}
+
+[dir="rtl"] .mobileTop {
+  align-items: flex-start;
+}
+
+[dir="rtl"] .viewAllBtn {
+  flex-direction: row-reverse;
+  padding: 6px 20px 6px 6px;
+}
+
+[dir="rtl"] .viewAllBtn svg {
+  transform: scaleX(-1);
+}
+
+@media (max-width: 767.98px) {
+  [dir="rtl"] .viewAllBtn {
+    padding: 5px 16px 5px 5px;
+  }
+}
+
+@media (max-width: 399.98px) {
+  [dir="rtl"] .viewAllBtn {
+    padding-right: 14px;
+    padding-left: 5px;
+  }
+}
