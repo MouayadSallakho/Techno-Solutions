@@ -22,7 +22,6 @@ export default function Header() {
 
   const handleChangeLanguage = (selectedLanguage) => {
     setLanguage(selectedLanguage);
-    setMenuOpen(false);
   };
 
   return (
@@ -34,10 +33,7 @@ export default function Header() {
               className={`d-none d-lg-flex align-items-center justify-content-between ${styles.heroNavDesktop}`}
             >
               <a href="/" className={styles.brand}>
-                <img
-                  src="/images/MMAinLogo.png"
-                  alt={t.header.logoAlt}
-                />
+                <img src="/images/MMAinLogo.png" alt={t.header.logoAlt} />
               </a>
 
               <nav
@@ -88,10 +84,7 @@ export default function Header() {
               className={`d-flex d-lg-none align-items-center justify-content-between ${styles.heroNavMobile}`}
             >
               <a href="/" className={`${styles.brand} ${styles.mobileBrand}`}>
-                <img
-                  src="/images/Logo-Techno.png"
-                  alt={t.header.logoAlt}
-                />
+                <img src="/images/Logo-Techno.png" alt={t.header.logoAlt} />
               </a>
 
               <div
@@ -146,7 +139,8 @@ export default function Header() {
         <div
           className={`${styles.mobileOffcanvas} ${
             menuOpen ? styles.mobileOffcanvasShow : ""
-          } ${isArabic ? styles.mobileOffcanvasRtl : ""}`}
+          }`}
+          dir={isArabic ? "rtl" : "ltr"}
         >
           <div className={styles.mobileMenuHeader}>
             <a href="/" className={`${styles.brand} ${styles.mobileMenuBrand}`}>

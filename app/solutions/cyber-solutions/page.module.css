@@ -113,6 +113,14 @@
   animation: floatGlowTwo 16s ease-in-out infinite alternate;
 }
 
+[dir="rtl"] .heroContent {
+  text-align: right;
+}
+
+[dir="rtl"] .topTag {
+  justify-content: flex-start;
+}
+
 @keyframes fadeUp {
   to {
     opacity: 1;

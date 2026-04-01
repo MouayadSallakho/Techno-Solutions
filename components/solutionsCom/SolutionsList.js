@@ -3,73 +3,55 @@
 import Link from "next/link";
 import Styles from "./SolutionsList.module.css";
 import { FaArrowRight } from "react-icons/fa6";
+import { useLanguage } from "@/context/LanguageContext";
 
-const solutionsData = [
+const solutionsMeta = [
   {
     id: "strato",
-    number: "01",
-    title: "Strato Solutions",
-    image: "/images/solutions1.png",
+    image: "/images/Last_Strato_Bannerr.webp",
     link: "/solutions/strato-solutions",
     colorClass: "strato",
-    items: [
-      "Web Development",
-      "Application Development",
-      "UX/UI Design & Products Design",
-      "Comprehensive ERP Systems for Your Business",
-    ],
   },
   {
     id: "power",
-    number: "02",
-    title: "Power Solutions",
-    image: "/images/solutions2.png",
+    image: "/images/Last_Power_Bannerr.webp",
     link: "/solutions/power-solutions",
     colorClass: "power",
-    items: [
-      "Solar energy Solutions",
-      "Alternative Energy Solutions",
-      "Integrated electrical solutions",
-    ],
   },
   {
     id: "cyber",
-    number: "03",
-    title: "Cyber Solutions",
-    image: "/images/solutions3.png",
+    image: "/images/Last_Cyber_Banerr.webp",
     link: "/solutions/cyber-solutions",
     colorClass: "cyber",
-    items: [
-      "Data Centers",
-      "Cybersecurity Solutions",
-      "Network Management Solutions",
-    ],
   },
   {
     id: "smart",
-    number: "04",
-    title: "Smart Solutions",
-    image: "/images/solutions4.png",
+    image: "/images/Last_Smart_Bannerr.webp",
     link: "/solutions/smart-solutions",
     colorClass: "smart",
-    items: [
-      "Interactive Smart Fountains",
-      "Smart Building Control Systems",
-      "Smart Monitoring and Control Systems",
-    ],
   },
   {
     id: "graphic",
-    number: "05",
-    title: "Graphic Solutions",
-    image: "/images/solutions5.png",
+    image: "/images/Last_Grafic_Bannerr.webp",
     link: "/solutions/graphic-solutions",
     colorClass: "graphic",
-    items: ["Brand Identity", "Marketing & Advertising Design"],
   },
 ];
 
 export default function SolutionsList({ excludeId = null }) {
+  const { t, isArabic } = useLanguage();
+
+  const solutionsData = solutionsMeta.map((solutionMeta) => {
+    const translatedItem = t.solutionsList.items.find(
+      (item) => item.id === solutionMeta.id
+    );
+
+    return {
+      ...solutionMeta,
+      ...translatedItem,
+    };
+  });
+
   const filteredSolutions = excludeId
     ? solutionsData.filter((solution) => solution.id !== excludeId)
     : solutionsData;
@@ -98,7 +80,7 @@ export default function SolutionsList({ excludeId = null }) {
                       <Link
                         href={solution.link}
                         className={Styles.imageWrapper}
-                        aria-label={`Go to ${solution.title}`}
+                        aria-label={`${t.solutionsList.ariaLabelPrefix} ${solution.title}`}
                       >
                         <img src={solution.image} alt={solution.title} />
                       </Link>
@@ -106,7 +88,7 @@ export default function SolutionsList({ excludeId = null }) {
 
                     <div className="col-lg-7 col-md-7 col-12">
                       <ul className={Styles.features}>
-                        {solution.items.map((item, i) => (
+                        {solution.features.map((item, i) => (
                           <li key={i}>{item}</li>
                         ))}
                       </ul>
@@ -120,9 +102,9 @@ export default function SolutionsList({ excludeId = null }) {
                   <Link
                     href={solution.link}
                     className={Styles.arrowBtn}
-                    aria-label={`Go to ${solution.title}`}
+                    aria-label={`${t.solutionsList.ariaLabelPrefix} ${solution.title}`}
                   >
-                    <FaArrowRight />
+                    <FaArrowRight className={isArabic ? Styles.arrowRtl : ""} />
                   </Link>
                 </div>
               </div>

@@ -16,7 +16,7 @@ export default function Footer() {
           <p>{t.footer.tag}</p>
         </div>
 
-        <div className={`row g-5 ${Styles.myRow}`}z>
+        <div className={`row g-5 ${Styles.myRow}`}>
           <div className="col-lg-5">
             <div className={Styles.left}>
               <h3 className={Styles.newsTitle}>{t.footer.newsletterTitle}</h3>

@@ -43,6 +43,7 @@
   letter-spacing: 0.01em;
   color: rgba(0, 0, 0, 0.45);
 }
+
 .heroTitle {
   margin: 0 0 34px;
   font-family: "Axiforma", sans-serif;
@@ -59,7 +60,6 @@
 
 .heroImageWrap {
   width: 100%;
-  /* max-width: 980px; */
   max-height: 400px;
   border-radius: 18px;
   overflow: hidden;
@@ -117,6 +117,15 @@
   );
   filter: blur(24px);
   animation: floatGlowTwo 16s ease-in-out infinite alternate;
+}
+
+/* RTL */
+[dir="rtl"] .heroContent {
+  text-align: right;
+}
+
+[dir="rtl"] .topTag {
+  justify-content: flex-start;
 }
 
 @keyframes fadeUp {

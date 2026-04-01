@@ -179,7 +179,7 @@
     0 10px 24px rgba(217, 92, 184, 0.14);
 }
 
-.desktopLang a {
+.desktopLang button {
   position: relative;
   z-index: 1;
   min-height: 50px;
@@ -198,9 +198,13 @@
     background 0.25s ease,
     color 0.25s ease,
     transform 0.25s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
-.desktopLang a:hover {
+.desktopLang button:hover {
   color: #ffffff;
   background: rgba(255, 255, 255, 0.14);
   transform: translateY(-1px);
@@ -213,10 +217,14 @@
       180deg,
       rgba(255, 255, 255, 0.38) 0%,
       rgba(255, 255, 255, 0.14) 100%
-    );
+    ) !important;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.58),
     0 4px 12px rgba(217, 92, 184, 0.1);
+}
+
+.langBtn {
+  background: transparent;
 }
 
 .langIcon {
@@ -265,7 +273,7 @@
     0 8px 20px rgba(217, 92, 184, 0.14);
 }
 
-.mobileLangSwitch a {
+.mobileLangSwitch button {
   position: relative;
   min-height: 40px;
   padding: 0 12px;
@@ -278,9 +286,13 @@
   justify-content: center;
   text-decoration: none;
   transition: 0.25s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
-.mobileLangSwitch a:hover {
+.mobileLangSwitch button:hover {
   background: rgba(255, 255, 255, 0.14);
   color: #ffffff;
 }
@@ -292,10 +304,14 @@
       180deg,
       rgba(255, 255, 255, 0.38) 0%,
       rgba(255, 255, 255, 0.14) 100%
-    );
+    ) !important;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.58),
     0 4px 12px rgba(217, 92, 184, 0.1);
+}
+
+.mobileLangBtn {
+  background: transparent;
 }
 
 .menuToggleBtn {
@@ -360,7 +376,7 @@
   inset: 0;
   background: rgba(0, 0, 0, 0.35);
   opacity: 0;
-  transition: 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .mobileOverlayShow .mobileBackdrop {
@@ -445,7 +461,12 @@
   font-size: 1rem;
   font-weight: 500;
   border: 1px solid rgba(0, 0, 0, 0.06);
-  transition: 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
   text-decoration: none;
   background: rgba(255, 255, 255, 0.55);
 }
@@ -504,7 +525,7 @@
   gap: 8px;
 }
 
-.mobileMenuLangLinks a {
+.mobileMenuLangLinks button {
   padding: 10px 14px;
   border-radius: 999px;
   color: #1f2937;
@@ -512,11 +533,18 @@
   border: 1px solid rgba(0, 0, 0, 0.06);
   font-size: 0.92rem;
   font-weight: 500;
-  transition: 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .mobileMenuLangActive {
@@ -532,6 +560,53 @@
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.82),
     0 8px 18px rgba(217, 92, 184, 0.08);
+}
+
+/* =========================
+   RTL SUPPORT
+========================= */
+
+[dir="rtl"] .navLink {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .desktopLang {
+  direction: ltr;
+}
+
+[dir="rtl"] .heroNavMobile {
+  direction: ltr;
+}
+
+[dir="rtl"] .mobileHeaderActions {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .mobileMenuHeader,
+[dir="rtl"] .mobileMenuBody,
+[dir="rtl"] .mobileMenuLinks,
+[dir="rtl"] .mobileMenuLang,
+[dir="rtl"] .mobileMenuLangLinks {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .mobileMenuLinks a:hover {
+  transform: translateX(-4px);
+}
+
+[dir="rtl"] .mobileMenuActive::before {
+  left: auto;
+  right: 14px;
+}
+
+[dir="rtl"] .mobileMenuActive {
+  padding-left: 16px !important;
+  padding-right: 30px !important;
+}
+
+[dir="rtl"] .mobileMenuLangLinks {
+  justify-content: flex-start;
 }
 
 /* =========================
@@ -575,7 +650,7 @@
     padding-inline: 16px;
   }
 
-  .mobileLangSwitch a {
+  .mobileLangSwitch button {
     padding: 0 10px;
     font-size: 0.8rem;
   }

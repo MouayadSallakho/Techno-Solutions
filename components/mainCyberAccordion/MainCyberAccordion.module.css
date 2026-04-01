@@ -316,6 +316,27 @@
   padding-left: 30px;
 }
 
+.textParagraph {
+  display: block;
+  margin: 0 0 12px;
+  max-width: 1100px;
+  color: #555555;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+  padding-left: 30px;
+}
+
+.textParagraph:last-child {
+  margin-bottom: 0;
+}
+
+.textContent strong,
+.textParagraph strong {
+  color: #2b2b2b;
+  font-weight: 500;
+}
+
 .list,
 .plainList {
   margin: 0;
@@ -335,6 +356,12 @@
 .plainList li::marker {
   color: var(--accent);
   font-size: 15px;
+}
+
+.list li strong,
+.plainList li strong {
+  color: #2b2b2b;
+  font-weight: 500;
 }
 
 /* cards */
@@ -467,6 +494,36 @@
   display: block;
 }
 
+/* RTL */
+[dir="rtl"] .mainCyberAccordionSection {
+  text-align: right;
+}
+
+[dir="rtl"] .holderTags {
+  direction: rtl;
+}
+
+[dir="rtl"] .mobileTabsControls {
+  direction: rtl;
+}
+
+[dir="rtl"] .address {
+  direction: rtl;
+}
+
+[dir="rtl"] .sec > p,
+[dir="rtl"] .textContent,
+[dir="rtl"] .textParagraph {
+  padding-left: 0;
+  padding-right: 30px;
+}
+
+[dir="rtl"] .list,
+[dir="rtl"] .plainList {
+  padding-left: 0;
+  padding-right: 50px;
+}
+
 @keyframes fadeContent {
   from {
     opacity: 0;
@@ -505,6 +562,7 @@
   }
 
   .textContent,
+  .textParagraph,
   .list li,
   .plainList li {
     font-size: 18px;
@@ -606,7 +664,8 @@
     padding-left: 0;
   }
 
-  .textContent {
+  .textContent,
+  .textParagraph {
     padding-left: 0;
   }
 
@@ -616,6 +675,7 @@
   }
 
   .textContent,
+  .textParagraph,
   .list li,
   .plainList li {
     font-size: 13px;
@@ -657,5 +717,17 @@
 
   .boxx img {
     height: 180px;
+  }
+
+  [dir="rtl"] .sec > p,
+  [dir="rtl"] .textContent,
+  [dir="rtl"] .textParagraph {
+    padding-right: 0;
+  }
+
+  [dir="rtl"] .list,
+  [dir="rtl"] .plainList {
+    padding-left: 0;
+    padding-right: 22px;
   }
 }

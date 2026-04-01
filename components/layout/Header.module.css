@@ -190,10 +190,9 @@
 }
 
 /* =========================
-   ACTIVE STATES - BEST PRACTICE
+   ACTIVE STATES
 ========================= */
 
-/* desktop nav active */
 .desktopActive {
   color: #ffffff !important;
   background:
@@ -227,7 +226,6 @@
   pointer-events: none;
 }
 
-/* desktop language active */
 .desktopLangActive {
   color: #ffffff !important;
   background:
@@ -260,7 +258,6 @@
   pointer-events: none;
 }
 
-/* mobile top language switch active */
 .mobileTopLangActive {
   color: #ffffff !important;
   background:
@@ -276,7 +273,6 @@
     0 4px 12px rgba(120, 180, 255, 0.12);
 }
 
-/* mobile menu active nav item */
 .mobileMenuActive {
   color: #ffffff !important;
   border-color: rgba(255, 255, 255, 0.14) !important;
@@ -292,7 +288,6 @@
     0 8px 20px rgba(30, 70, 155, 0.18);
 }
 
-/* mobile menu language active */
 .mobileMenuLangActive {
   color: #ffffff !important;
   border-color: rgba(255, 255, 255, 0.14) !important;
@@ -497,7 +492,7 @@
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   opacity: 0;
-  transition: 0.35s ease;
+  transition: opacity 0.35s ease;
 }
 
 .mobileOverlayShow .mobileBackdrop {
@@ -527,19 +522,6 @@
 }
 
 .mobileOffcanvasShow {
-  transform: translateX(0);
-}
-
-.mobileOffcanvasRtl {
-  left: 0;
-  right: auto;
-  transform: translateX(-100%);
-  border-left: none;
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 20px 0 50px rgba(0, 0, 0, 0.24);
-}
-
-.mobileOffcanvasRtl.mobileOffcanvasShow {
   transform: translateX(0);
 }
 
@@ -609,7 +591,12 @@
   font-size: 1rem;
   font-weight: 500;
   border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: 0.28s ease;
+  transition:
+    transform 0.28s ease,
+    color 0.28s ease,
+    background 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease;
   text-decoration: none;
   background:
     linear-gradient(
@@ -663,7 +650,12 @@
   border: 1px solid rgba(255, 255, 255, 0.06);
   font-size: 0.92rem;
   font-weight: 500;
-  transition: 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
   text-decoration: none;
 }
 
@@ -682,13 +674,27 @@
   border: 1px solid rgba(255, 255, 255, 0.06);
   font-size: 0.92rem;
   font-weight: 500;
-  transition: 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
   cursor: pointer;
 }
 
 /* =========================
-   RTL IMPROVEMENTS
+   RTL INSIDE MENU ONLY
 ========================= */
+
+[dir="rtl"] .mobileMenuHeader,
+[dir="rtl"] .mobileMenuBody,
+[dir="rtl"] .mobileMenuLinks,
+[dir="rtl"] .mobileMenuLang,
+[dir="rtl"] .mobileMenuLangLinks {
+  direction: rtl;
+  text-align: right;
+}
 
 [dir="rtl"] .mobileMenuLinks a:hover {
   transform: translateX(-4px);

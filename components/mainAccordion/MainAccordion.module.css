@@ -356,7 +356,23 @@
   padding-left: 30px;
 }
 
-.textContent strong {
+.textParagraph {
+  display: block;
+  margin: 0 0 12px;
+  max-width: 1100px;
+  color: var(--text-soft);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  padding-left: 30px;
+}
+
+.textParagraph:last-child {
+  margin-bottom: 0;
+}
+
+.textContent strong,
+.textParagraph strong {
   font-weight: 500;
   color: #2b2b2b;
 }
@@ -531,6 +547,36 @@
   display: block;
 }
 
+/* RTL */
+[dir="rtl"] .mainAccordionSection {
+  text-align: right;
+}
+
+[dir="rtl"] .sec > p,
+[dir="rtl"] .textContent,
+[dir="rtl"] .textParagraph {
+  padding-left: 0;
+  padding-right: 30px;
+}
+
+[dir="rtl"] .list,
+[dir="rtl"] .plainList {
+  padding-left: 0;
+  padding-right: 50px;
+}
+
+[dir="rtl"] .address {
+  direction: rtl;
+}
+
+[dir="rtl"] .holderTags {
+  direction: rtl;
+}
+
+[dir="rtl"] .mobileTabsControls {
+  direction: rtl;
+}
+
 @keyframes fadeContent {
   from {
     opacity: 0;
@@ -569,6 +615,7 @@
   }
 
   .textContent,
+  .textParagraph,
   .list li,
   .plainList li {
     font-size: 18px;
@@ -678,7 +725,8 @@
     padding-left: 0;
   }
 
-  .textContent {
+  .textContent,
+  .textParagraph {
     padding-left: 0;
   }
 
@@ -688,6 +736,7 @@
   }
 
   .textContent,
+  .textParagraph,
   .list li,
   .plainList li {
     font-size: 13px;
@@ -737,5 +786,17 @@
 
   .boxx img {
     height: 180px;
+  }
+
+  [dir="rtl"] .sec > p,
+  [dir="rtl"] .textContent,
+  [dir="rtl"] .textParagraph {
+    padding-right: 0;
+  }
+
+  [dir="rtl"] .list,
+  [dir="rtl"] .plainList {
+    padding-left: 0;
+    padding-right: 22px;
   }
 }
