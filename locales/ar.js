@@ -94,41 +94,41 @@ export const ar = {
       {
         id: 1,
        image: "/images/last_Strato_Home.WEBP",
-        title: "حلول ستراتو",
+        title: "حلول الاستراتيجية",
         date: "Aug 5, 2025",
-        alt: "حلول ستراتو",
+        alt: "حلول الاستراتيجية",
         cardClass: "holderInfo1",
       },
       {
         id: 2,
    image: "/images/last_Power_Home.WEBP",
-        title: "حلول باور",
+        title: "حلول الاستراتيجية",
         date: "Aug 5, 2025",
-        alt: "حلول باور",
+        alt: "حلول الاستراتيجية",
         cardClass: "holderInfo2",
       },
       {
         id: 3,
            image: "/images/last_Cyber_Home.WEBP",
-        title: "حلول سايبر",
+        title: "حلول الأمن السيبراني",
         date: "Aug 5, 2025",
-        alt: "حلول سايبر",
+        alt: "حلول الأمن السيبراني",
         cardClass: "holderInfo3",
       },
       {
         id: 4,
         image: "/images/last_Smart_Home.WEBP",
-        title: "حلول سمارت",
+        title: "حلول الأنظمة الذكية",
         date: "Aug 5, 2025",
-        alt: "حلول سمارت",
+        alt: "حلول الأنظمة الذكية",
         cardClass: "holderInfo4",
       },
       {
         id: 5,
                image: "/images/last_Grafic_Home.WEBP",
-        title: "حلول جرافيك",
+        title: "حلول التصميم الجرافيكي",
         date: "Aug 5, 2025",
-        alt: "حلول جرافيك",
+        alt: "حلول التصميم الجرافيكي",
         cardClass: "holderInfo5",
       },
     ],
@@ -144,38 +144,38 @@ export const ar = {
     items: [
       {
         id: "01.",
-        title: "حلول ستراتو",
+        title: "حلول الاستراتيجية",
         href: "/solutions/strato-solutions",
         colorClass: "strato",
-        ariaLabel: "الانتقال إلى حلول ستراتو",
+        ariaLabel: "الانتقال إلى حلول الاستراتيجية",
       },
       {
         id: "02.",
-        title: "حلول باور",
+        title: "حلول الاستراتيجية",
         href: "/solutions/power-solutions",
         colorClass: "power",
-        ariaLabel: "الانتقال إلى حلول باور",
+        ariaLabel: "الانتقال إلى حلول الاستراتيجية",
       },
       {
         id: "03.",
-        title: "حلول سايبر",
+        title: "حلول الأمن السيبراني",
         href: "/solutions/cyber-solutions",
         colorClass: "cyber",
-        ariaLabel: "الانتقال إلى حلول سايبر",
+        ariaLabel: "الانتقال إلى حلول الأمن السيبراني",
       },
       {
         id: "04.",
-        title: "حلول سمارت",
+        title: "حلول الأنظمة الذكية",
         href: "/solutions/smart-solutions",
         colorClass: "smart",
-        ariaLabel: "الانتقال إلى حلول سمارت",
+        ariaLabel: "الانتقال إلى حلول الأنظمة الذكية",
       },
       {
         id: "05.",
-        title: "حلول جرافيك",
+        title: "حلول التصميم الجرافيكي",
         href: "/solutions/graphic-solutions",
         colorClass: "graphic",
-        ariaLabel: "الانتقال إلى حلول جرافيك",
+        ariaLabel: "الانتقال إلى حلول التصميم الجرافيكي",
       },
     ],
   },
@@ -438,7 +438,7 @@ solutionsList: {
     {
       id: "strato",
       number: "01",
-      title: "حلول ستراتو",
+      title: "حلول الاستراتيجية",
       features: [
         "تطوير المواقع الإلكترونية",
         "تطوير التطبيقات",
@@ -449,7 +449,7 @@ solutionsList: {
     {
       id: "power",
       number: "02",
-      title: "حلول باور",
+      title: "حلول الاستراتيجية",
       features: [
         "حلول الطاقة الشمسية",
         "حلول الطاقة البديلة",
@@ -459,7 +459,7 @@ solutionsList: {
     {
       id: "cyber",
       number: "03",
-      title: "حلول سايبر",
+      title: "حلول الأمن السيبراني",
       features: [
         "مراكز البيانات",
         "حلول الأمن السيبراني",
@@ -469,7 +469,7 @@ solutionsList: {
     {
       id: "smart",
       number: "04",
-      title: "حلول سمارت",
+      title: "حلول الأنظمة الذكية",
       features: [
         "النوافير الذكية التفاعلية",
         "أنظمة التحكم الذكية بالمباني",
@@ -479,7 +479,7 @@ solutionsList: {
     {
       id: "graphic",
       number: "05",
-      title: "حلول جرافيك",
+      title: "حلول التصميم الجرافيكي",
       features: [
         "الهوية البصرية",
         "التصميم التسويقي والإعلاني",
@@ -495,8 +495,8 @@ solutionsList: {
 stratoPage: {
   hero: {
     tag: "الحلول",
-    title: "حلول ستراتو",
-    imageAlt: "حلول ستراتو",
+    title: "حلول الاستراتيجية",
+    imageAlt: "حلول الاستراتيجية",
   },
 },
 
@@ -839,8 +839,8 @@ mainAccordion: {
 powerPage: {
   hero: {
     tag: "الحلول",
-    title: "حلول باور",
-    imageAlt: "حلول باور",
+    title: "حلول الاستراتيجية",
+    imageAlt: "حلول الاستراتيجية",
   },
 },
 
@@ -1151,8 +1151,8 @@ mainPowerAccordion: {
 cyberPage: {
   hero: {
     tag: "الحلول",
-    title: "حلول سايبر",
-    imageAlt: "حلول سايبر",
+    title: "حلول الأمن السيبراني",
+    imageAlt: "حلول الأمن السيبراني",
   },
 },
 
@@ -1373,8 +1373,8 @@ mainCyberAccordion: {
 smartPage: {
   hero: {
     tag: "الحلول",
-    title: "حلول سمارت",
-    imageAlt: "حلول سمارت",
+    title: "حلول الأنظمة الذكية",
+    imageAlt: "حلول الأنظمة الذكية",
   },
 },
 
@@ -1590,8 +1590,8 @@ mainSmartAccordion: {
 graphicPage: {
   hero: {
     tag: "الحلول",
-    title: "حلول جرافيك",
-    imageAlt: "حلول جرافيك",
+    title: "حلول التصميم الجرافيكي",
+    imageAlt: "حلول التصميم الجرافيكي",
   },
 },
 
