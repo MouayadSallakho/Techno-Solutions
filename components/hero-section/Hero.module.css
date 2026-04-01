@@ -314,13 +314,13 @@
   height: 30px;
   margin-left: 14px;
   border-radius: 50%;
-  background:
+  /* background:
     linear-gradient(180deg, rgba(133, 255, 245, 0.22), rgba(120, 216, 255, 0.1)),
-    rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(133, 255, 245, 0.28);
-  box-shadow:
+    rgba(255, 255, 255, 0.04); */
+  /* border: 1px solid rgba(133, 255, 245, 0.28); */
+  /* box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.03) inset,
-    0 0 18px rgba(120, 216, 255, 0.12);
+    0 0 18px rgba(120, 216, 255, 0.12); */
   display: flex;
   align-items: center;
   justify-content: center;

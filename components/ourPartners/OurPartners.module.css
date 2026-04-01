@@ -59,6 +59,7 @@
   overflow: hidden;
   direction: ltr;
   position: relative;
+  touch-action: pan-y;
 }
 
 .rowTrack {
@@ -72,10 +73,6 @@
   -webkit-backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
-}
-
-.rowWrapper:hover .rowTrack {
-  animation-play-state: paused;
 }
 
 .moveLeft {
@@ -100,6 +97,8 @@
     box-shadow 0.3s ease,
     background-color 0.3s ease;
   transform: translateZ(0);
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .logoCard:hover {
@@ -117,6 +116,10 @@
   display: block;
   opacity: 0.96;
   transform: translateZ(0);
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
 }
 
 @keyframes marqueeLeft {
@@ -201,7 +204,7 @@
   }
 
   .rowTrack {
-    gap: 14px;
+    gap: 0px;
   }
 
   .logoCard {
@@ -215,7 +218,7 @@
   }
 }
 
-/* RTL text layout like StatsKey */
+/* RTL text layout */
 [dir="rtl"] .top {
   direction: rtl;
 }

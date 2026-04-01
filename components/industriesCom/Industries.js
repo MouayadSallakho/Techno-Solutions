@@ -57,6 +57,7 @@ export default function Industries() {
               key={isArabic ? "rtl" : "ltr"}
               modules={[Pagination]}
               slidesPerView={1.12}
+              centeredSlides={false}
               spaceBetween={14}
               pagination={{ clickable: true }}
               dir={isArabic ? "rtl" : "ltr"}

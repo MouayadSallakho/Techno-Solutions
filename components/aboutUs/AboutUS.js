@@ -4,10 +4,9 @@ import Styles from "./AboutUs.module.css";
 import { useLanguage } from "@/context/LanguageContext";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, FreeMode } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
-import "swiper/css/free-mode";
 
 export default function AboutUs() {
   const { t, isArabic } = useLanguage();
@@ -27,10 +26,7 @@ export default function AboutUs() {
   const loopBrands = [...brands, ...brands, ...brands];
 
   return (
-    <section
-      className={Styles.about}
-      dir={isArabic ? "rtl" : "ltr"}
-    >
+    <section className={Styles.about} dir={isArabic ? "rtl" : "ltr"}>
       <div className="container">
         <div className={Styles.text}>
           <div className={Styles.heading}>
@@ -45,16 +41,13 @@ export default function AboutUs() {
       <div className={Styles.sliderWrapper} dir="ltr">
         <Swiper
           key={isArabic ? "rtl-brands" : "ltr-brands"}
-          modules={[Autoplay, FreeMode]}
+          modules={[Autoplay]}
           className={Styles.mySwiper}
           loop={true}
           dir="ltr"
           style={{ direction: "ltr" }}
-          freeMode={{
-            enabled: true,
-            momentum: false,
-          }}
-          allowTouchMove={true}
+          allowTouchMove={false}
+          simulateTouch={false}
           grabCursor={false}
           speed={7000}
           autoplay={{
@@ -63,6 +56,8 @@ export default function AboutUs() {
             pauseOnMouseEnter: false,
             reverseDirection: isArabic,
           }}
+          touchStartPreventDefault={false}
+          touchMoveStopPropagation={false}
           spaceBetween={16}
           breakpoints={{
             0: {

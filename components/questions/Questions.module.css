@@ -189,7 +189,7 @@
 }
 
 .accordionButton[aria-expanded="true"] .icon {
-  background-color: rgba(43, 108, 223, 0.08);
+  /* background-color: rgba(43, 108, 223, 0.08); */
 }
 
 .accordionButton[aria-expanded="true"] .icon::before,

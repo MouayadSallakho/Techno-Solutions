@@ -37,6 +37,7 @@
   font-size: 24px;
   line-height: 1;
   letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .description {
@@ -71,7 +72,8 @@
     transform 0.35s ease,
     box-shadow 0.35s ease,
     background-color 0.35s ease,
-    border-color 0.35s ease;
+    border-color 0.35s ease,
+    opacity 0.35s ease;
   border: 1px solid transparent;
   position: relative;
   overflow: hidden;
@@ -135,9 +137,8 @@
   color: rgba(0, 0, 0, 0.78);
 }
 
-/* ===== CARD 1 - YELLOW ===== */
+/* ===== DESKTOP HOVER COLORS ===== */
 .yellowCard:hover {
-  border-color: rgba(240, 211, 0, 0.48);
   border: 3px solid rgba(240, 211, 0, 0.48);
 }
 
@@ -154,7 +155,6 @@
   color: #c8ab00;
 }
 
-/* ===== CARD 2 - GREEN ===== */
 .greenCard:hover {
   border: 3px solid rgba(44, 196, 55, 0.48);
 }
@@ -172,7 +172,6 @@
   color: #22a92f;
 }
 
-/* ===== CARD 3 - BLUE ===== */
 .blueCard:hover {
   border: 3px solid rgba(49, 108, 244, 0.48);
 }
@@ -190,7 +189,6 @@
   color: #2f67e5;
 }
 
-/* ===== CARD 4 - ORANGE ===== */
 .orangeCard:hover {
   border: 3px solid rgba(255, 153, 0, 0.48);
 }
@@ -208,7 +206,6 @@
   color: #df8600;
 }
 
-/* ===== CARD 5 - PINK / MAGENTA ===== */
 .pinkCard:hover {
   border: 3px solid rgba(240, 45, 255, 0.48);
 }
@@ -250,6 +247,80 @@
 
 .swiperBox {
   margin-bottom: 0;
+}
+
+/* MOBILE / TABLET ACTIVE CARD SYSTEM */
+@media (max-width: 991.98px) {
+  .credibilitySwiper :global(.swiper-slide) .swiperBox {
+    transform: none !important;
+    box-shadow: none;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent;
+    background-color: #e5e5ea;
+  }
+
+  .credibilitySwiper :global(.swiper-slide) .swiperBox::before {
+    opacity: 0;
+  }
+
+  .credibilitySwiper :global(.swiper-slide) .swiperBox .iconWrap {
+    transform: none !important;
+  }
+
+  .credibilitySwiper :global(.swiper-slide) .swiperBox p {
+    color: #000000f2;
+  }
+
+  .credibilitySwiper :global(.swiper-slide-active) .swiperBox {
+    transform: none !important;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    background-color: #f0f0f4;
+  }
+
+  .credibilitySwiper :global(.swiper-slide-active) .swiperBox::before {
+    opacity: 1;
+  }
+
+  .credibilitySwiper :global(.swiper-slide-active) .yellowCard {
+    border-color: rgba(240, 211, 0, 0.48);
+  }
+
+  .credibilitySwiper :global(.swiper-slide-active) .greenCard {
+    border-color: rgba(44, 196, 55, 0.48);
+  }
+
+  .credibilitySwiper :global(.swiper-slide-active) .blueCard {
+    border-color: rgba(49, 108, 244, 0.48);
+  }
+
+  .credibilitySwiper :global(.swiper-slide-active) .orangeCard {
+    border-color: rgba(255, 153, 0, 0.48);
+  }
+
+  .credibilitySwiper :global(.swiper-slide-active) .pinkCard {
+    border-color: rgba(240, 45, 255, 0.48);
+  }
+
+  .credibilitySwiper :global(.swiper-slide-active) .yellowCard p {
+    color: #c8ab00;
+  }
+
+  .credibilitySwiper :global(.swiper-slide-active) .greenCard p {
+    color: #22a92f;
+  }
+
+  .credibilitySwiper :global(.swiper-slide-active) .blueCard p {
+    color: #2f67e5;
+  }
+
+  .credibilitySwiper :global(.swiper-slide-active) .orangeCard p {
+    color: #df8600;
+  }
+
+  .credibilitySwiper :global(.swiper-slide-active) .pinkCard p {
+    color: #d91ee6;
+  }
 }
 
 /* same custom pagination */

@@ -73,6 +73,7 @@
 
 .mySwiper :global(.swiper-slide) {
   height: auto;
+  pointer-events: none;
 }
 
 .brandCard {
@@ -86,6 +87,7 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   transition: transform 0.3s ease, border-color 0.3s ease;
   transform: translateZ(0);
+  pointer-events: none;
 }
 
 .brandCard:hover {
@@ -99,6 +101,7 @@
   object-fit: contain;
   display: block;
   transform: translateZ(0);
+  pointer-events: none;
 }
 
 /* Large screens */

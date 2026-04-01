@@ -60,6 +60,7 @@ function PartnerRow({
               src={image}
               alt={`${altPrefix} ${index + 1}`}
               className={Styles.logoImage}
+              draggable="false"
             />
           </div>
         ))}
