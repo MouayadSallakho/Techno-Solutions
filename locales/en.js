@@ -1809,6 +1809,83 @@ mainGraphicAccordion: {
   ],
 },
 
+contactPage: {
+  hero: {
+    tag: "CONTACT US",
+    title: "Let’s Connect",
+  },
+},
+
+aboutUsPage: {
+  hero: {
+    tag: "SOLUTIONS",
+    titleLines: [
+      "Leading Digital",
+      "Transformation with",
+      "Confidence &",
+      "Innovation",
+    ],
+  },
+
+  vision: {
+    label: "Our Vision",
+    text: "Our vision is to make technology an accessible power for everyone—not a privilege, but a reliable tool that enables every project to build a future of greater stability, efficiency, and sustainable growth. We strive to be the technology partner that supports organizations on their digital transformation journey, where smart solutions, operational systems, software development, digital experiences, solar energy technologies, and—finally—robust cybersecurity become natural components of their success. We aim to create an environment where innovation is practical, results are tangible, and progress is achievable no matter how challenging the path may be.",
+  },
+
+  mission: {
+    label: "Our Mission",
+    title: "Empowering Organizations Through Technology",
+    text: "We empower organizations through fully integrated technology solutions, enabling stability, sustainable growth, and intelligent digital transformation. We design practical, scalable systems covering networks, smart automation, software development, solar energy, digital experiences, and security—delivered as one cohesive ecosystem aligned with each client’s goals and the realities of the local market. We are committed to deeply understanding project needs and creating precise, reliable solutions that simplify operations, enhance efficiency, and turn technology into tangible value at every stage.",
+  },
+
+  stats: {
+    items: [
+      {
+        number: "1900+",
+        label: "Projects Completed",
+      },
+      {
+        number: "22k+",
+        label: "Work Hours",
+      },
+      {
+        number: "800+",
+        label: "Happy Clients",
+      },
+      {
+        number: "30+",
+        label: "Experts",
+      },
+      {
+        number: "6",
+        label: "Countries",
+      },
+    ],
+  },
+
+  story: {
+    label: "About Us",
+    title: "A story shaped by people... and built through meaningful technology",
+    paragraphs: [
+      "At a time when technology was reshaping the world, the need inside Syria—especially in Damascus—was growing for digital solutions capable of supporting institutions on their path toward recovery and renewed stability. Building on more than eight years of regional experience developed through the EJAF branches in Iraq and Dubai, Techno Solutions - Damascus was established not merely as an expansion, but as a mission.",
+      "The Damascus branch was created to offer technology as an enabler, not just a service—an empowering force that helps organizations overcome challenges, enhance security, improve efficiency, and build more stable operational environments, especially in times where clarity matters most.",
+      "In Damascus, Techno Solutions provides a comprehensive suite of advanced solutions, including:",
+      "Each solution is designed to fit the unique nature of the Syrian market, while adhering to the global standards shaped across EJAF’s regional experience. The distinctive challenges found in Syria gave us deeper insight, stronger adaptability, and a more human-centered approach to building solutions that truly matter.",
+      "At Techno Solutions, we believe every organization—regardless of size—deserves to operate efficiently, be protected effectively, and have the digital tools needed to grow. This is why we don’t just deliver services; we build long-term partnerships, understand each challenge deeply, and create end-to-end solutions that ensure technology becomes a strength—not a burden.",
+      "Here in Damascus, we craft more than digital solutions. We craft a future—rooted in purpose, built with precision, and driven by trust.",
+    ],
+    list: [
+      "Cyber Security Solutions",
+      "Network Management & Data Center Solutions",
+      "Smart Building & Smart Sensor Solutions",
+      "Smart Fountains & Interactive Installations",
+      "ERP Systems & Business Automation",
+      "Graphic Design, Branding & UI/UX Digital Experience",
+      "Software Development (Web & Mobile Applications)",
+    ],
+  },
+},
+
 
 
 

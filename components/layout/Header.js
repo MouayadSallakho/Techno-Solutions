@@ -15,7 +15,7 @@ export default function Header() {
       { key: "solutions", label: t.header.links.solutions, href: "/solutions" },
       { key: "projects", label: t.header.links.projects, href: "#" },
       { key: "contact", label: t.header.links.contact, href: "#" },
-      { key: "about", label: t.header.links.about, href: "#" },
+      { key: "about", label: t.header.links.about, href: "/about-us" },
     ],
     [t]
   );
