@@ -66,6 +66,7 @@
   opacity: 0;
   transform: translateY(34px);
   animation: titleReveal 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  font-family: Axiforma-Medium;
 }
 
 .heroTitle span:first-child {

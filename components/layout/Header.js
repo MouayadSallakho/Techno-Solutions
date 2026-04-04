@@ -13,8 +13,8 @@ export default function Header() {
     () => [
       { key: "home", label: t.header.links.home, href: "/" },
       { key: "solutions", label: t.header.links.solutions, href: "/solutions" },
-      { key: "projects", label: t.header.links.projects, href: "#" },
-      { key: "contact", label: t.header.links.contact, href: "#" },
+      { key: "projects", label: t.header.links.projects, href: "/projects" },
+      { key: "contact", label: t.header.links.contact, href: "/contact" },
       { key: "about", label: t.header.links.about, href: "/about-us" },
     ],
     [t]

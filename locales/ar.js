@@ -37,7 +37,7 @@ export const ar = {
     items: [
       {
         id: "01",
-        title: "حلول الاستراتيجية",
+        title: "حلول البرمجية",
         description:
           "أتمتة ذكية وتقنيات مترابطة صُممت لتحسين سير العمل ودعم اتخاذ القرار بكفاءة.",
       },
@@ -49,7 +49,7 @@ export const ar = {
       },
       {
         id: "03",
-        title: "حلول الأمن السيبراني",
+        title: "حلول التقنية",
         description:
           "أتمتة ذكية وتقنيات مترابطة صُممت لتحسين سير العمل ودعم اتخاذ القرار بكفاءة.",
       },
@@ -94,7 +94,7 @@ export const ar = {
       {
         id: 1,
        image: "/images/last_Strato_Home.WEBP",
-        title: "حلول الاستراتيجية",
+        title: "حلول البرمجية",
         date: "Aug 5, 2025",
         alt: "حلول الاستراتيجية",
         cardClass: "holderInfo1",
@@ -102,7 +102,7 @@ export const ar = {
       {
         id: 2,
    image: "/images/last_Power_Home.WEBP",
-        title: "حلول الاستراتيجية",
+        title: "حلول الطاقة",
         date: "Aug 5, 2025",
         alt: "حلول الاستراتيجية",
         cardClass: "holderInfo2",
@@ -110,7 +110,7 @@ export const ar = {
       {
         id: 3,
            image: "/images/last_Cyber_Home.WEBP",
-        title: "حلول الأمن السيبراني",
+        title: "حلول التقنية",
         date: "Aug 5, 2025",
         alt: "حلول الأمن السيبراني",
         cardClass: "holderInfo3",
@@ -144,21 +144,21 @@ export const ar = {
     items: [
       {
         id: "01.",
-        title: "حلول الاستراتيجية",
+        title: "حلول البرمجية",
         href: "/solutions/strato-solutions",
         colorClass: "strato",
         ariaLabel: "الانتقال إلى حلول الاستراتيجية",
       },
       {
         id: "02.",
-        title: "حلول الاستراتيجية",
+        title: "حلول الطاقة",
         href: "/solutions/power-solutions",
         colorClass: "power",
         ariaLabel: "الانتقال إلى حلول الاستراتيجية",
       },
       {
         id: "03.",
-        title: "حلول الأمن السيبراني",
+        title: "حلول التقنية ",
         href: "/solutions/cyber-solutions",
         colorClass: "cyber",
         ariaLabel: "الانتقال إلى حلول الأمن السيبراني",
@@ -438,7 +438,7 @@ solutionsList: {
     {
       id: "strato",
       number: "01",
-      title: "حلول الاستراتيجية",
+      title: "حلول البرمجية",
       features: [
         "تطوير المواقع الإلكترونية",
         "تطوير التطبيقات",
@@ -449,7 +449,7 @@ solutionsList: {
     {
       id: "power",
       number: "02",
-      title: "حلول الاستراتيجية",
+      title: "حلول الطاقة",
       features: [
         "حلول الطاقة الشمسية",
         "حلول الطاقة البديلة",
@@ -459,7 +459,7 @@ solutionsList: {
     {
       id: "cyber",
       number: "03",
-      title: "حلول الأمن السيبراني",
+      title: "حلول التقنية ",
       features: [
         "مراكز البيانات",
         "حلول الأمن السيبراني",
@@ -495,7 +495,7 @@ solutionsList: {
 stratoPage: {
   hero: {
     tag: "الحلول",
-    title: "حلول الاستراتيجية",
+    title: "حلول البرمجية",
     imageAlt: "حلول الاستراتيجية",
   },
 },
@@ -839,8 +839,8 @@ mainAccordion: {
 powerPage: {
   hero: {
     tag: "الحلول",
-    title: "حلول الاستراتيجية",
-    imageAlt: "حلول الاستراتيجية",
+    title: "حلول الطاقة",
+    imageAlt: "حلول الطاقة",
   },
 },
 
@@ -1151,8 +1151,8 @@ mainPowerAccordion: {
 cyberPage: {
   hero: {
     tag: "الحلول",
-    title: "حلول الأمن السيبراني",
-    imageAlt: "حلول الأمن السيبراني",
+    title: "حلول التقنية ",
+    imageAlt: "حلول التقنية",
   },
 },
 
@@ -1876,6 +1876,43 @@ aboutUsPage: {
 },
 
 
+
+
+
+
+projectsPage: {
+  hero: {
+    tag: "المشاريع",
+    titleLine1: "أعمالنا المختارة",
+    titleLine2: "قريبًا",
+  },
+  status: {
+    badge: "قيد التجهيز",
+    title: "نعمل حاليًا على إعداد هذه الصفحة.",
+    description:
+      "لا يزال قسم المشاريع قيد التنظيم وسيتم نشره قريبًا بطريقة تليق بعرض أعمالنا بالشكل الصحيح. يمكنك الآن العودة إلى الصفحة الرئيسية أو التواصل معنا مباشرة.",
+  },
+  actions: {
+    backHome: "العودة إلى الرئيسية",
+    contactUs: "تواصل معنا",
+  },
+},
+
+
+
+
+
+whatsappWidget: {
+  ariaLabel: "تواصل معنا على واتساب",
+  closeLabel: "إغلاق",
+  bubbleMessages: [
+    "هل تريد حجز استشارة مجانية؟",
+    "تواصل معنا الآن",
+    "احصل على عرض سعر سريع",
+    "فريقنا جاهز لمساعدتك"
+  ],
+  defaultMessage: "مرحبًا، أود الاستفسار عن خدماتكم"
+},
 
 
 };

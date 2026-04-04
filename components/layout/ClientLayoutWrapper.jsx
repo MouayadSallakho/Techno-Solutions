@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import WhatsAppFloat from "@/components/whatsapp/WhatsAppFloat";
 
 export default function ClientLayoutWrapper({
   children,
@@ -28,6 +29,7 @@ export default function ClientLayoutWrapper({
   return (
     <div className={isArabic ? arabicFont : englishFont} dir={dir}>
       {children}
+      <WhatsAppFloat />
     </div>
   );
 }

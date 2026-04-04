@@ -38,6 +38,7 @@
   line-height: 1.2;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+
 }
 
 .description {
@@ -49,6 +50,7 @@
   line-height: 48px;
   letter-spacing: 0;
   max-width: 950px;
+  font-family: Axiforma-Medium;
 }
 
 .sliderWrapper {

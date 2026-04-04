@@ -1,16 +1,145 @@
+/* =========================
+   Axiforma Font Faces
+========================= */
+
+@font-face {
+  font-family: "Axiforma-Thin";
+  src: url("/fonts/Axiforma-Thin.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Axiforma-ThinItalic";
+  src: url("/fonts/Axiforma-ThinItalic.ttf") format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Axiforma-Light";
+  src: url("/fonts/Axiforma-Light.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Axiforma-LightItalic";
+  src: url("/fonts/Axiforma-LightItalic.ttf") format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Axiforma-Book";
+  src: url("/fonts/Axiforma-Book.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Axiforma-BookItalic";
+  src: url("/fonts/Axiforma-BookItalic.ttf") format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Axiforma-Regular";
+  src: url("/fonts/Axiforma-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Axiforma-Italic";
+  src: url("/fonts/Axiforma-Italic.ttf") format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Axiforma-Medium";
+  src: url("/fonts/Axiforma-Medium.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Axiforma-MediumItalic";
+  src: url("/fonts/Axiforma-MediumItalic.ttf") format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Axiforma-SemiBold";
+  src: url("/fonts/Axiforma-SemiBold.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Axiforma-SemiBoldItalic";
+  src: url("/fonts/Axiforma-SemiBoldItalic.ttf") format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Axiforma-Bold";
+  src: url("/fonts/Axiforma-Bold.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Axiforma-BoldItalic";
+  src: url("/fonts/Axiforma-BoldItalic.ttf") format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Axiforma-ExtraBold";
+  src: url("/fonts/Axiforma-ExtraBold.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Axiforma-ExtraBoldItalic";
+  src: url("/fonts/Axiforma-ExtraBoldItalic.ttf") format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Axiforma-Heavy";
+  src: url("/fonts/Axiforma-Heavy.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Axiforma-HeavyItalic";
+  src: url("/fonts/Axiforma-HeavyItalic.ttf") format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Axiforma-Black";
+  src: url("/fonts/Axiforma-Black.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Axiforma-BlackItalic";
+  src: url("/fonts/Axiforma-BlackItalic.ttf") format("truetype");
+  font-style: italic;
+}
+
+/* =========================
+   Global Reset
+========================= */
+
 html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
-  font-family: var(--font-axiforma), sans-serif;
-  overflow-x: hidden;
+  font-family: "Axiforma-Regular", sans-serif;
 }
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 p {
@@ -18,8 +147,12 @@ p {
   padding: 0;
 }
 
+/* =========================
+   Language Helpers
+========================= */
+
 .font-english {
-  font-family: var(--font-axiforma), sans-serif;
+  font-family: "Axiforma-Regular", sans-serif;
 }
 
 .font-arabic {
@@ -34,17 +167,86 @@ p {
   text-align: left;
 }
 
+/* =========================
+   Axiforma Family Helpers
+========================= */
 
-
-
-
-
-
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+.ax-thin-family {
+  font-family: "Axiforma-Thin", sans-serif;
 }
 
+.ax-thin-italic-family {
+  font-family: "Axiforma-ThinItalic", sans-serif;
+}
+
+.ax-light-family {
+  font-family: "Axiforma-Light", sans-serif;
+}
+
+.ax-light-italic-family {
+  font-family: "Axiforma-LightItalic", sans-serif;
+}
+
+.ax-book-family {
+  font-family: "Axiforma-Book", sans-serif;
+}
+
+.ax-book-italic-family {
+  font-family: "Axiforma-BookItalic", sans-serif;
+}
+
+.ax-regular-family {
+  font-family: "Axiforma-Regular", sans-serif;
+}
+
+.ax-italic-family {
+  font-family: "Axiforma-Italic", sans-serif;
+}
+
+.ax-medium-family {
+  font-family: "Axiforma-Medium", sans-serif;
+}
+
+.ax-medium-italic-family {
+  font-family: "Axiforma-MediumItalic", sans-serif;
+}
+
+.ax-semibold-family {
+  font-family: "Axiforma-SemiBold", sans-serif;
+}
+
+.ax-semibold-italic-family {
+  font-family: "Axiforma-SemiBoldItalic", sans-serif;
+}
+
+.ax-bold-family {
+  font-family: "Axiforma-Bold", sans-serif;
+}
+
+.ax-bold-italic-family {
+  font-family: "Axiforma-BoldItalic", sans-serif;
+}
+
+.ax-extrabold-family {
+  font-family: "Axiforma-ExtraBold", sans-serif;
+}
+
+.ax-extrabold-italic-family {
+  font-family: "Axiforma-ExtraBoldItalic", sans-serif;
+}
+
+.ax-heavy-family {
+  font-family: "Axiforma-Heavy", sans-serif;
+}
+
+.ax-heavy-italic-family {
+  font-family: "Axiforma-HeavyItalic", sans-serif;
+}
+
+.ax-black-family {
+  font-family: "Axiforma-Black", sans-serif;
+}
+
+.ax-black-italic-family {
+  font-family: "Axiforma-BlackItalic", sans-serif;
+}

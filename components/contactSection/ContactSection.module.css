@@ -34,6 +34,8 @@
   font-weight: 400;
   letter-spacing: 1px;
   white-space: nowrap;
+
+  
 }
 
 .mainHeading h2 {
@@ -50,6 +52,7 @@
   font-size: 32px;
   line-height: 32px;
   letter-spacing: 1px;
+  font-family: Axiforma-Thin;
 }
 
 /* equal height columns */
@@ -127,6 +130,8 @@
   font-size: 24px;
   line-height: 28px;
   font-weight: 500;
+
+  font-family: Axiforma-Medium;
 }
 
 .officeCallIcon {
@@ -151,6 +156,7 @@
   font-size: 18px;
   line-height: 28px;
   font-weight: 600;
+    font-family: Axiforma-Medium;
 }
 
 .officeInfo p,

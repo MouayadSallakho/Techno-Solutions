@@ -56,7 +56,7 @@
 .heroTitle {
   margin: 0;
   font-weight: 400;
-  font-size: 73px;
+  font-size: 70px;
   line-height: 1;
   position: relative;
   background: linear-gradient(
@@ -75,8 +75,11 @@
   -webkit-background-clip: text;
   background-clip: text;
   animation: technoShimmer 10s ease-in-out infinite;
+  font-family: Axiforma-Bold;
   
 }
+
+
 
 .heroTitle sup {
   font-size: 0.3em;
@@ -87,13 +90,15 @@
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+
+  
 }
 
 .heroLeadAnimated {
   margin-top: 6px;
   margin-bottom: 0;
   font-weight: 400;
-  font-size: 54px !important;
+  font-size: 64px !important;
   line-height: 1;
   background: linear-gradient(
     90deg,
@@ -111,6 +116,8 @@
   background-clip: text;
   filter: drop-shadow(0 0 10px rgba(120, 216, 255, 0.18));
   animation: doItFlow 7s linear infinite;
+
+  font-family: Axiforma-Bold;
 }
 
 @keyframes technoShimmer {
@@ -149,6 +156,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
+
+  font-family: Axiforma-Bold;
 }
 
 .solutionsTitle p {
@@ -209,12 +218,14 @@
   color: rgba(245, 248, 255, 0.9);
   opacity: 1;
   transform: translateY(0);
+  
 }
 
 .solutionName {
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
+  font-family: Axiforma-Regular;
 }
 
 .solutionHead small {
@@ -223,6 +234,7 @@
   font-size: 13px;
   line-height: 1;
   color: #ffffff;
+  
 }
 
 .solutionDescription {
@@ -237,6 +249,7 @@
   opacity: 0;
   transform: translateY(6px);
   pointer-events: none;
+  font-family: Axiforma-thin;
 }
 
 .solutionItem:hover {

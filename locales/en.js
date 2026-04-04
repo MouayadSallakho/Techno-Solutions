@@ -1889,4 +1889,39 @@ aboutUsPage: {
 
 
 
+
+projectsPage: {
+  hero: {
+    tag: "PROJECTS",
+    titleLine1: "Selected Work",
+    titleLine2: "Coming Soon",
+  },
+  status: {
+    badge: "In Progress",
+    title: "We’re currently preparing this page.",
+    description:
+      "Our projects section is still being organized and will be published soon with the right level of detail and presentation. In the meantime, you can return to the homepage or contact us directly.",
+  },
+  actions: {
+    backHome: "Back to Home",
+    contactUs: "Contact Us",
+  },
+},
+
+
+
+
+
+whatsappWidget: {
+  ariaLabel: "Contact us on WhatsApp",
+  closeLabel: "Close",
+  bubbleMessages: [
+    "Want a free consultation?",
+    "Contact us now",
+    "Get a quick quote",
+    "We’re here to help"
+  ],
+  defaultMessage: "Hello, I would like to know more about your services"
+},
+
 };
