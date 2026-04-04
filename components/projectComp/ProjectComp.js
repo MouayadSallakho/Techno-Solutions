@@ -13,22 +13,41 @@ export default function ProjectComp() {
   const projects = t.projects.items;
 
   return (
-    <section
-      className={styles.Project}
-      dir={isArabic ? "rtl" : "ltr"}
-    >
+    <section className={styles.Project} dir={isArabic ? "rtl" : "ltr"}>
       <div className="container">
-        <div className={styles.topRow}>
-          <div className={styles.contentGroup}>
-            <div className={styles.heading}>
+        <div
+          className={`${styles.topRow} ${
+            isArabic ? styles.topRowArabic : styles.topRowEnglish
+          }`}
+        >
+          <div
+            className={`${styles.contentGroup} ${
+              isArabic ? styles.contentGroupArabic : styles.contentGroupEnglish
+            }`}
+          >
+            <div
+              className={`${styles.heading} ${
+                isArabic ? styles.headingArabic : styles.headingEnglish
+              }`}
+            >
               <span className={styles.line}></span>
               <p>{t.projects.label}</p>
             </div>
 
-            <h2 className={styles.description}>{t.projects.title}</h2>
+            <h2
+              className={`${styles.description} ${
+                isArabic ? styles.descriptionArabic : styles.descriptionEnglish
+              }`}
+            >
+              {t.projects.title}
+            </h2>
           </div>
 
-          <div className={styles.btnWrapper}>
+          <div
+            className={`${styles.btnWrapper} ${
+              isArabic ? styles.btnWrapperArabic : styles.btnWrapperEnglish
+            }`}
+          >
             <a href="#" className={styles.viewAllBtn}>
               <span className={styles.viewAllText}>{t.projects.viewAll}</span>
 
@@ -92,15 +111,33 @@ export default function ProjectComp() {
         </div>
 
         <div className={styles.mobileContent}>
-          <div className={styles.mobileTop}>
-            <div className={styles.heading}>
+          <div
+            className={`${styles.mobileTop} ${
+              isArabic ? styles.mobileTopArabic : styles.mobileTopEnglish
+            }`}
+          >
+            <div
+              className={`${styles.heading} ${
+                isArabic ? styles.headingArabic : styles.headingEnglish
+              }`}
+            >
               <span className={styles.line}></span>
               <p>{t.projects.label}</p>
             </div>
 
-            <h2 className={styles.description}>{t.projects.title}</h2>
+            <h2
+              className={`${styles.description} ${
+                isArabic ? styles.descriptionArabic : styles.descriptionEnglish
+              }`}
+            >
+              {t.projects.title}
+            </h2>
 
-            <div className={styles.btnWrapper}>
+            <div
+              className={`${styles.btnWrapper} ${
+                isArabic ? styles.btnWrapperArabic : styles.btnWrapperEnglish
+              }`}
+            >
               <a href="#" className={styles.viewAllBtn}>
                 <span className={styles.viewAllText}>{t.projects.viewAll}</span>
 
@@ -132,10 +169,7 @@ export default function ProjectComp() {
             </div>
           </div>
 
-          <div
-            className={styles.swiperWrap}
-            dir={isArabic ? "rtl" : "ltr"}
-          >
+          <div className={styles.swiperWrap} dir={isArabic ? "rtl" : "ltr"}>
             <Swiper
               key={isArabic ? "rtl" : "ltr"}
               modules={[Pagination]}

@@ -55,6 +55,25 @@
   height: 650px !important;
   transform: translate(-50%, -50%) rotate(23deg);
 }
+[dir="rtl"] .vortexShadow {
+  aspect-ratio: 1.03;
+  left: 30.8%;
+  top: 97%;
+  width: 258px !important;
+  height: 650px !important;
+  transform: translate(-50%, -50%) rotate(23deg);
+}
+@media(max-width:1200px){
+[dir="rtl"] .vortexShadow {
+  aspect-ratio: 1.03;
+  left: 22.8%;
+  top: 96%;
+  width: 258px !important;
+  height: 650px !important;
+  transform: translate(-50%, -50%) rotate(23deg);
+}
+}
+
 
 .vortexShadowImage {
   width: 177px;
