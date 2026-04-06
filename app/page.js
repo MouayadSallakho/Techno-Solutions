@@ -22,15 +22,15 @@ export default function Home() {
     <main>
       <Header />
       <Hero />
-      <AboutUs />
+      {/* <AboutUs /> */}
       {/* <ProjectComp /> */}
-      <Solutions />
-      <StatsKey />
-      <OurPartners />
+      {/* <Solutions /> */}
+      {/* <StatsKey /> */}
+      {/* <OurPartners /> */}
       {/* <Industries /> */}
-      <Credibility />
-      <Questions />
-      <ContactSection/>
+      {/* <Credibility /> */}
+      {/* <Questions /> */}
+      {/* <ContactSection/> */}
       <Footer />
     </main>
   );
