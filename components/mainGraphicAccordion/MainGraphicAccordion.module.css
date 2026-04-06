@@ -736,3 +736,43 @@
     padding-right: 22px;
   }
 }
+
+
+
+
+
+
+
+
+.tagButton {
+  font-family: Axiforma-Medium;
+}
+
+
+.address {
+  font-family: Axiforma-Medium;
+}
+
+
+.textContent {
+  font-family: Axiforma-Thin;
+}
+
+
+.textContent {
+  font-family: Axiforma-Thin;
+}
+
+.textParagraph {
+  font-family: Axiforma-Thin;
+}
+
+.textContent strong,
+.textParagraph strong {
+  font-family: Axiforma-Regular;
+}
+
+.list li,
+.plainList li {
+  font-family: Axiforma-Thin;
+}

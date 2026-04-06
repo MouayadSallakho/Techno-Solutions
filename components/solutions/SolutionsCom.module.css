@@ -232,6 +232,13 @@
   height: auto;
   border-radius: 18px;
   object-fit: cover;
+  max-height: 550px;
+}
+
+@media(max-width:992px){
+  .previewImage{
+    display: none;
+  }
 }
 
 /* Tablet */

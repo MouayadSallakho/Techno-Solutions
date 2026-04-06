@@ -10,13 +10,45 @@ import styles from "./HeaderStrato.module.css";
 
 export default function HeaderStrato() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
+
   const pathname = usePathname();
   const { t, language, setLanguage, isArabic } = useLanguage();
+
+  const solutionLinks = useMemo(
+    () => [
+      {
+        key: "strato",
+        label: t.header.solutionItems.strato,
+        href: "/solutions/strato-solutions",
+      },
+      {
+        key: "power",
+        label: t.header.solutionItems.power,
+        href: "/solutions/power-solutions",
+      },
+      {
+        key: "cyber",
+        label: t.header.solutionItems.cyber,
+        href: "/solutions/cyber-solutions",
+      },
+      {
+        key: "smart",
+        label: t.header.solutionItems.smart,
+        href: "/solutions/smart-solutions",
+      },
+      {
+        key: "graphic",
+        label: t.header.solutionItems.graphic,
+        href: "/solutions/graphic-solutions",
+      },
+    ],
+    [t]
+  );
 
   const navLinks = useMemo(
     () => [
       { key: "home", label: t.header.links.home, href: "/" },
-      { key: "solutions", label: t.header.links.solutions, href: "/solutions" },
       { key: "projects", label: t.header.links.projects, href: "/projects" },
       { key: "contact", label: t.header.links.contact, href: "/contact" },
       { key: "about", label: t.header.links.about, href: "/about-us" },
@@ -29,30 +61,93 @@ export default function HeaderStrato() {
     return pathname === href || pathname.startsWith(`${href}/`);
   };
 
+  const isSolutionsActive =
+    pathname === "/solutions" || pathname.startsWith("/solutions/");
+
   const handleChangeLanguage = (selectedLanguage) => {
     setLanguage(selectedLanguage);
   };
 
+  const handleToggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
+  const handleCloseMenu = () => {
+    setMenuOpen(false);
+    setMobileSolutionsOpen(false);
+  };
+
+  const toggleMobileSolutions = () => {
+    setMobileSolutionsOpen((prev) => !prev);
+  };
+
+  const renderDesktopIndicator = (isActive) => {
+    if (isActive) {
+      return (
+        <span className={styles.activeIcon}>
+          <HiArrowUpRight />
+        </span>
+      );
+    }
+
+    return (
+      <span className={styles.navIndicator}>
+        <span className={styles.navDot}></span>
+        <span className={styles.hoverIcon}>
+          <HiArrowUpRight />
+        </span>
+      </span>
+    );
+  };
+
   return (
-    <>
-      <header className={styles.siteHeader}>
-        <div className={`container ${styles.headerContainer}`}>
-          <div className={styles.heroNavWrapper}>
-            <div
-              className={`d-none d-lg-flex align-items-center justify-content-between ${styles.heroNavDesktop}`}
+    <header className={styles.siteHeader}>
+      <div className={`container ${styles.headerContainer}`}>
+        <div className={styles.heroNavWrapper}>
+          <div
+            className={`d-none d-lg-flex align-items-center justify-content-between ${styles.heroNavDesktop}`}
+          >
+            <Link href="/" className={styles.brand}>
+              <img src="/images/MMainLogoStrato.png" alt={t.header.logoAlt} />
+            </Link>
+
+            <nav
+              className={styles.desktopNav}
+              aria-label={t.header.navAriaLabel}
             >
-              <Link href="/" className={styles.brand}>
-                <img
-                  src="/images/MMainLogoStrato.png"
-                  alt={t.header.logoAlt}
-                />
+              <Link
+                href="/"
+                className={`${styles.navLink} ${
+                  pathname === "/" ? styles.desktopActive : ""
+                }`}
+              >
+                {renderDesktopIndicator(pathname === "/")}
+                <span>{t.header.links.home}</span>
               </Link>
 
-              <nav
-                className={styles.desktopNav}
-                aria-label={t.header.navAriaLabel}
-              >
-                {navLinks.map((link) => {
+              <div className={styles.desktopDropdown}>
+                <Link
+                  href="/solutions"
+                  className={`${styles.navLink} ${
+                    isSolutionsActive ? styles.desktopActive : ""
+                  }`}
+                >
+                  {renderDesktopIndicator(isSolutionsActive)}
+                  <span>{t.header.links.solutions}</span>
+                </Link>
+
+                <div className={styles.desktopDropdownMenu}>
+                  {solutionLinks.map((link) => (
+                    <Link key={link.key} href={link.href}>
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {navLinks
+                .filter((link) => link.key !== "home")
+                .map((link) => {
                   const isActive = isLinkActive(link.href);
 
                   return (
@@ -63,58 +158,50 @@ export default function HeaderStrato() {
                         isActive ? styles.desktopActive : ""
                       }`}
                     >
-                      {isActive ? (
-                        <span className={styles.activeIcon}>
-                          <HiArrowUpRight />
-                        </span>
-                      ) : (
-                        <span className={styles.navDot}></span>
-                      )}
+                      {renderDesktopIndicator(isActive)}
                       <span>{link.label}</span>
                     </Link>
                   );
                 })}
-              </nav>
-
-              <div
-                className={styles.desktopLang}
-                aria-label={t.header.languageSwitcherAriaLabel}
-              >
-                <button
-                  type="button"
-                  onClick={() => handleChangeLanguage("en")}
-                  className={`${styles.langBtn} ${
-                    language === "en" ? styles.desktopLangActive : ""
-                  }`}
-                  aria-pressed={language === "en"}
-                >
-                  <span className={styles.langIcon}>
-                    <GrLanguage />
-                  </span>
-                  <span>{t.header.languages.english}</span>
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => handleChangeLanguage("ar")}
-                  className={`${styles.langBtn} ${
-                    language === "ar" ? styles.desktopLangActive : ""
-                  }`}
-                  aria-pressed={language === "ar"}
-                >
-                  <span>{t.common.switchToArabic}</span>
-                </button>
-              </div>
-            </div>
+            </nav>
 
             <div
-              className={`d-flex d-lg-none align-items-center justify-content-between ${styles.heroNavMobile}`}
+              className={styles.desktopLang}
+              aria-label={t.header.languageSwitcherAriaLabel}
+            >
+              <button
+                type="button"
+                onClick={() => handleChangeLanguage("en")}
+                className={`${styles.langBtn} ${
+                  language === "en" ? styles.desktopLangActive : ""
+                }`}
+                aria-pressed={language === "en"}
+              >
+                <span className={styles.langIcon}>
+                  <GrLanguage />
+                </span>
+                <span>{t.header.languages.english}</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => handleChangeLanguage("ar")}
+                className={`${styles.langBtn} ${
+                  language === "ar" ? styles.desktopLangActive : ""
+                }`}
+                aria-pressed={language === "ar"}
+              >
+                <span>{t.common.switchToArabic}</span>
+              </button>
+            </div>
+          </div>
+
+          <div className={`d-lg-none ${styles.mobileNavWrapper}`}>
+            <div
+              className={`d-flex align-items-center justify-content-between ${styles.heroNavMobile}`}
             >
               <Link href="/" className={`${styles.brand} ${styles.mobileBrand}`}>
-                <img
-                  src="/images/Logo-Strato.png"
-                  alt={t.header.logoAlt}
-                />
+                <img src="/images/MMainLogoStrato.png" alt={t.header.logoAlt} />
               </Link>
 
               <div
@@ -148,10 +235,14 @@ export default function HeaderStrato() {
                 </div>
 
                 <button
-                  className={styles.menuToggleBtn}
+                  className={`${styles.menuToggleBtn} ${
+                    menuOpen ? styles.menuToggleBtnActive : ""
+                  }`}
                   type="button"
-                  aria-label={t.header.openMenu}
-                  onClick={() => setMenuOpen(true)}
+                  aria-label={menuOpen ? t.header.closeMenu : t.header.openMenu}
+                  aria-expanded={menuOpen}
+                  aria-controls="mobile-menu"
+                  onClick={handleToggleMenu}
                 >
                   <span></span>
                   <span></span>
@@ -159,101 +250,94 @@ export default function HeaderStrato() {
                 </button>
               </div>
             </div>
-          </div>
-        </div>
-      </header>
 
-      <div
-        className={`${styles.mobileOverlay} ${
-          menuOpen ? styles.mobileOverlayShow : ""
-        }`}
-      >
-        <div
-          className={`${styles.mobileOffcanvas} ${
-            menuOpen ? styles.mobileOffcanvasShow : ""
-          }`}
-          dir={isArabic ? "rtl" : "ltr"}
-        >
-          <div className={styles.mobileMenuHeader}>
-            <Link href="/" className={`${styles.brand} ${styles.mobileMenuBrand}`}>
-              <img
-                src="/images/Logo-Strato.png"
-                alt={t.header.logoAlt}
-              />
-            </Link>
-
-            <button
-              type="button"
-              className={styles.mobileMenuClose}
-              aria-label={t.header.closeMenu}
-              onClick={() => setMenuOpen(false)}
+            <div
+              id="mobile-menu"
+              className={`${styles.mobileDropdownMenu} ${
+                menuOpen ? styles.mobileDropdownMenuShow : ""
+              }`}
+              dir={isArabic ? "rtl" : "ltr"}
             >
-              <span></span>
-              <span></span>
-            </button>
-          </div>
-
-          <div className={styles.mobileMenuBody}>
-            <nav
-              className={styles.mobileMenuLinks}
-              aria-label={t.header.mobileNavAriaLabel}
-            >
-              {navLinks.map((link) => {
-                const isActive = isLinkActive(link.href);
-
-                return (
+              <div className={styles.mobileMenuBody}>
+                <nav
+                  className={styles.mobileMenuLinks}
+                  aria-label={t.header.mobileNavAriaLabel}
+                >
                   <Link
-                    key={link.key}
-                    href={link.href}
-                    className={isActive ? styles.mobileMenuActive : ""}
-                    onClick={() => setMenuOpen(false)}
+                    href="/"
+                    className={pathname === "/" ? styles.mobileCurrentPage : ""}
+                    onClick={handleCloseMenu}
                   >
-                    {link.label}
+                    {t.header.links.home}
                   </Link>
-                );
-              })}
-            </nav>
 
-            <div className={styles.mobileMenuDivider}></div>
+                  <div
+                    className={`${styles.mobileSolutionsBlock} ${
+                      mobileSolutionsOpen ? styles.mobileSolutionsBlockOpen : ""
+                    }`}
+                  >
+                    <div className={styles.mobileSolutionsTopRow}>
+                      <Link
+                        href="/solutions"
+                        className={isSolutionsActive ? styles.mobileCurrentPage : ""}
+                        onClick={handleCloseMenu}
+                      >
+                        {t.header.links.solutions}
+                      </Link>
 
-            <div className={styles.mobileMenuLang}>
-              <span className={styles.mobileMenuLabel}>
-                {t.common.language}
-              </span>
+                      <button
+                        type="button"
+                        className={styles.mobileSolutionsToggle}
+                        onClick={toggleMobileSolutions}
+                        aria-expanded={mobileSolutionsOpen}
+                      >
+                        <span
+                          className={`${styles.mobileSolutionsArrow} ${
+                            mobileSolutionsOpen
+                              ? styles.mobileSolutionsArrowOpen
+                              : ""
+                          }`}
+                        ></span>
+                      </button>
+                    </div>
 
-              <div className={styles.mobileMenuLangLinks}>
-                <button
-                  type="button"
-                  onClick={() => handleChangeLanguage("en")}
-                  className={`${styles.mobileMenuLangBtn} ${
-                    language === "en" ? styles.mobileMenuLangActive : ""
-                  }`}
-                  aria-pressed={language === "en"}
-                >
-                  <GrLanguage />
-                  <span>{t.header.languages.english}</span>
-                </button>
+                    <div
+                      className={`${styles.mobileSolutionsSubmenu} ${
+                        mobileSolutionsOpen
+                          ? styles.mobileSolutionsSubmenuOpen
+                          : ""
+                      }`}
+                    >
+                      {solutionLinks.map((link) => (
+                        <Link key={link.key} href={link.href} onClick={handleCloseMenu}>
+                          {link.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
 
-                <button
-                  type="button"
-                  onClick={() => handleChangeLanguage("ar")}
-                  className={`${styles.mobileMenuLangBtn} ${
-                    language === "ar" ? styles.mobileMenuLangActive : ""
-                  }`}
-                  aria-pressed={language === "ar"}
-                >
-                  <span>{t.header.languages.arabic}</span>
-                </button>
+                  {navLinks
+                    .filter((link) => link.key !== "home")
+                    .map((link) => {
+                      const isActive = isLinkActive(link.href);
+
+                      return (
+                        <Link
+                          key={link.key}
+                          href={link.href}
+                          className={isActive ? styles.mobileCurrentPage : ""}
+                          onClick={handleCloseMenu}
+                        >
+                          {link.label}
+                        </Link>
+                      );
+                    })}
+                </nav>
               </div>
             </div>
           </div>
         </div>
-
-        <div
-          className={styles.mobileBackdrop}
-          onClick={() => setMenuOpen(false)}
-        ></div>
       </div>
-    </>
+    </header>
   );
 }

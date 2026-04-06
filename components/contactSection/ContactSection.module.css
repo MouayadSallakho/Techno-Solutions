@@ -7,7 +7,7 @@
   display: flex;
   align-items: flex-start;
   gap: 90px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .smallLabel {
@@ -34,8 +34,10 @@
   font-weight: 400;
   letter-spacing: 1px;
   white-space: nowrap;
+}
 
-  
+.mainHeading {
+  flex: 1;
 }
 
 .mainHeading h2 {
@@ -105,16 +107,19 @@
     0 0 0 1px rgba(59, 120, 234, 0.14);
 }
 
+/* ===== MAIN FIX HERE ===== */
 .officeCardContent {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
   align-items: center;
-  gap: 22px;
+  gap: 24px;
   width: 100%;
+  min-height: 170px;
 }
 
 .officeTextSide {
-  flex: 1;
+  min-width: 0;
+  width: 100%;
 }
 
 .officeTop {
@@ -130,7 +135,6 @@
   font-size: 24px;
   line-height: 28px;
   font-weight: 500;
-
   font-family: Axiforma-Medium;
 }
 
@@ -156,7 +160,7 @@
   font-size: 18px;
   line-height: 28px;
   font-weight: 600;
-    font-family: Axiforma-Medium;
+  font-family: Axiforma-Medium;
 }
 
 .officeInfo p,
@@ -174,8 +178,9 @@
 }
 
 .officeMap {
-  width: 150px;
-  min-width: 150px;
+  width: 180px;
+  min-width: 180px;
+  min-height: 170px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -193,6 +198,7 @@
 
 .mapSvg {
   width: 100%;
+  max-width: 150px;
   height: auto;
   display: block;
 }
@@ -342,7 +348,7 @@
 }
 
 [dir="rtl"] .officeCardContent {
-  flex-direction: row-reverse;
+  grid-template-columns: 180px minmax(0, 1fr);
 }
 
 [dir="rtl"] .officeTop {
@@ -424,6 +430,16 @@
     flex: unset;
   }
 
+  .officeCardContent {
+    grid-template-columns: minmax(0, 1fr) 140px;
+    gap: 18px;
+    min-height: 150px;
+  }
+
+  [dir="rtl"] .officeCardContent {
+    grid-template-columns: 140px minmax(0, 1fr);
+  }
+
   .officeTop h3 {
     font-size: 28px;
   }
@@ -438,8 +454,13 @@
   }
 
   .officeMap {
-    width: 130px;
-    min-width: 130px;
+    width: 140px;
+    min-width: 140px;
+    min-height: 140px;
+  }
+
+  .mapSvg {
+    max-width: 120px;
   }
 
   .formCard {
@@ -470,7 +491,13 @@
   }
 
   .officeCardContent {
+    grid-template-columns: minmax(0, 1fr) 110px;
     gap: 16px;
+    min-height: 130px;
+  }
+
+  [dir="rtl"] .officeCardContent {
+    grid-template-columns: 110px minmax(0, 1fr);
   }
 
   .officeTop h3 {
@@ -487,8 +514,13 @@
   }
 
   .officeMap {
-    width: 100px;
-    min-width: 100px;
+    width: 110px;
+    min-width: 110px;
+    min-height: 110px;
+  }
+
+  .mapSvg {
+    max-width: 90px;
   }
 
   .formCard {
@@ -506,10 +538,6 @@
 }
 
 @media (max-width: 575.98px) {
-  .officeCardContent {
-    align-items: center;
-  }
-
   .mainHeading h2 {
     font-size: 28px;
   }
@@ -518,12 +546,28 @@
     font-size: 16px;
   }
 
+  .officeCard {
+    padding: 18px;
+  }
+
+  .officeCardContent {
+    grid-template-columns: minmax(0, 1fr) 90px;
+    gap: 14px;
+    min-height: 110px;
+  }
+
+  [dir="rtl"] .officeCardContent {
+    grid-template-columns: 90px minmax(0, 1fr);
+  }
+
   .officeTop {
     gap: 14px;
+    margin-bottom: 14px;
   }
 
   .officeTop h3 {
     font-size: 21px;
+    line-height: 1.3;
   }
 
   .officeCallIcon {
@@ -532,7 +576,12 @@
   }
 
   .officeMap {
-    width: 78px;
-    min-width: 78px;
+    width: 90px;
+    min-width: 90px;
+    min-height: 90px;
+  }
+
+  .mapSvg {
+    max-width: 78px;
   }
 }

@@ -22,11 +22,25 @@ export const en = {
       about: "About Us",
     },
 
+
+    solutionItems: {
+  strato: "Strato Solutions",
+  power: "Power Solutions",
+  cyber: "Cyber Solutions",
+  smart: "Smart Solutions",
+  graphic: "Graphic Solutions",
+},
+
+
+
     languages: {
       english: "English",
       arabic: "Arabic",
     },
   },
+
+
+  
 
   hero: {
     brand: "Techno Solutions",

@@ -32,11 +32,9 @@
   isolation: isolate;
   overflow: hidden;
   background:
-    linear-gradient(
-      180deg,
+    linear-gradient(180deg,
       rgba(58, 58, 60, 0.96) 0%,
-      rgba(52, 52, 54, 0.98) 100%
-    );
+      rgba(52, 52, 54, 0.98) 100%);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.08),
     0 12px 30px rgba(0, 0, 0, 0.08);
@@ -49,11 +47,9 @@
   border-radius: inherit;
   pointer-events: none;
   background:
-    linear-gradient(
-      180deg,
+    linear-gradient(180deg,
       rgba(255, 255, 255, 0.08) 0%,
-      rgba(255, 255, 255, 0.02) 100%
-    );
+      rgba(255, 255, 255, 0.02) 100%);
   z-index: -1;
 }
 
@@ -85,11 +81,9 @@
 .activeTag {
   color: #ffffff;
   background:
-    linear-gradient(
-      180deg,
+    linear-gradient(180deg,
       rgba(255, 255, 255, 0.16) 0%,
-      rgba(255, 255, 255, 0.08) 100%
-    ),
+      rgba(255, 255, 255, 0.08) 100%),
     rgba(var(--accent-rgb), 0.14);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.22),
@@ -105,11 +99,9 @@
   height: 42%;
   border-radius: 999px;
   background:
-    linear-gradient(
-      180deg,
+    linear-gradient(180deg,
       rgba(255, 255, 255, 0.25),
-      rgba(255, 255, 255, 0.02)
-    );
+      rgba(255, 255, 255, 0.02));
   pointer-events: none;
 }
 
@@ -244,11 +236,9 @@
   isolation: isolate;
   overflow: hidden;
   background:
-    linear-gradient(
-      180deg,
+    linear-gradient(180deg,
       rgba(var(--accent-rgb), 0.92) 0%,
-      rgba(var(--accent-rgb), 0.78) 100%
-    );
+      rgba(var(--accent-rgb), 0.78) 100%);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.28),
     0 10px 24px rgba(var(--accent-rgb), 0.22);
@@ -261,11 +251,9 @@
   border-radius: inherit;
   pointer-events: none;
   background:
-    linear-gradient(
-      180deg,
+    linear-gradient(180deg,
       rgba(255, 255, 255, 0.18) 0%,
-      rgba(255, 255, 255, 0.04) 100%
-    );
+      rgba(255, 255, 255, 0.04) 100%);
   z-index: -1;
 }
 
@@ -276,11 +264,9 @@
   border-radius: inherit;
   pointer-events: none;
   background:
-    radial-gradient(
-      circle at 30% 22%,
+    radial-gradient(circle at 30% 22%,
       rgba(255, 255, 255, 0.35),
-      transparent 34%
-    );
+      transparent 34%);
   z-index: -1;
 }
 
@@ -299,7 +285,7 @@
   margin-bottom: 58px;
 }
 
-.sec > p {
+.sec>p {
   margin: 0 0 16px;
   font-weight: 400;
   font-size: 40px;
@@ -376,11 +362,9 @@
 .box {
   height: 100%;
   background:
-    linear-gradient(
-      180deg,
+    linear-gradient(180deg,
       rgba(255, 255, 255, 0.86) 0%,
-      rgba(229, 229, 234, 0.96) 100%
-    );
+      rgba(229, 229, 234, 0.96) 100%);
   border: 1px solid rgba(var(--accent-rgb), 0.12);
   border-radius: 20px;
   padding: 28px 20px 24px;
@@ -416,11 +400,9 @@
   justify-content: center;
   margin-bottom: 18px;
   background:
-    linear-gradient(
-      180deg,
+    linear-gradient(180deg,
       rgba(var(--accent-rgb), 0.14) 0%,
-      rgba(var(--accent-rgb), 0.07) 100%
-    );
+      rgba(var(--accent-rgb), 0.07) 100%);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.48);
 }
@@ -519,7 +501,7 @@
   direction: rtl;
 }
 
-[dir="rtl"] .sec > p,
+[dir="rtl"] .sec>p,
 [dir="rtl"] .textContent,
 [dir="rtl"] .textParagraph {
   padding-left: 0;
@@ -536,6 +518,7 @@
     opacity: 0;
     transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -564,7 +547,7 @@
     font-size: 34px;
   }
 
-  .sec > p {
+  .sec>p {
     font-size: 24px;
     padding-left: 20px;
   }
@@ -589,7 +572,7 @@
     height: 220px;
   }
 
-  [dir="rtl"] .sec > p,
+  [dir="rtl"] .sec>p,
   [dir="rtl"] .textContent,
   [dir="rtl"] .textParagraph {
     padding-left: 0;
@@ -681,7 +664,7 @@
     margin-bottom: 28px;
   }
 
-  .sec > p {
+  .sec>p {
     font-size: 20px;
     margin-bottom: 12px;
     line-height: 1.3;
@@ -743,7 +726,7 @@
     height: 180px;
   }
 
-  [dir="rtl"] .sec > p,
+  [dir="rtl"] .sec>p,
   [dir="rtl"] .textContent,
   [dir="rtl"] .textParagraph {
     padding-right: 0;
@@ -753,4 +736,42 @@
     padding-left: 0;
     padding-right: 22px;
   }
+}
+
+
+
+
+
+
+.tagButton {
+  font-family: Axiforma-Medium;
+}
+
+
+.address {
+  font-family: Axiforma-Medium;
+}
+
+
+.textContent {
+  font-family: Axiforma-Thin;
+}
+
+
+.textContent {
+  font-family: Axiforma-Thin;
+}
+
+.textParagraph {
+  font-family: Axiforma-Thin;
+}
+
+.textContent strong,
+.textParagraph strong {
+  font-family: Axiforma-Regular;
+}
+
+.list li,
+.plainList li {
+  font-family: Axiforma-Thin;
 }

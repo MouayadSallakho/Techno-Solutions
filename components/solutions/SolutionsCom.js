@@ -64,7 +64,7 @@ export default function Solutions() {
           <div className="col-lg-5">
             <div className={styles.rightSide}>
               <img
-                src="/images/solutions-com.png"
+                src="/images/Group-Solutions.jpg"
                 alt={t.solutionsSection.previewAlt}
                 className={styles.previewImage}
               />

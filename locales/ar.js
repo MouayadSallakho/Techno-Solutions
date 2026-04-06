@@ -14,6 +14,17 @@ export const ar = {
     openMenu: "فتح القائمة",
     closeMenu: "إغلاق القائمة",
 
+
+
+    solutionItems: {
+  strato: "حلول ستراتو",
+  power: "حلول الطاقة",
+  cyber: "حلول الأمن السيبراني",
+  smart: "الحلول الذكية",
+  graphic: "حلول التصميم الجرافيكي",
+},
+
+
     links: {
       home: "الرئيسية",
       solutions: "الحلول",
@@ -843,8 +854,6 @@ powerPage: {
     imageAlt: "حلول الطاقة",
   },
 },
-
-
 
 
 

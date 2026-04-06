@@ -55,10 +55,10 @@ function renderTextContent(content, styles) {
 function renderListItems(items) {
   return items.map((item, itemIndex) => (
     <li key={itemIndex}>
-      {typeof item === "object" && item.strong ? (
+      {typeof item === "object" && item !== null ? (
         <>
-          <strong>{item.strong} </strong>
-          {item.text}
+          {item.strong ? <strong>{item.strong} </strong> : null}
+          {item.text ? item.text : null}
         </>
       ) : (
         item
