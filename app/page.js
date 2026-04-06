@@ -27,7 +27,7 @@ export default function Home() {
       <Solutions />
       <StatsKey />
       {/* <OurPartners /> */}
-      <Industries />
+      {/* <Industries /> */}
       <Credibility />
       <Questions />
       <ContactSection/>
