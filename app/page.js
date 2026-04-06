@@ -21,12 +21,12 @@ export default function Home() {
   return (
     <main>
       <Header />
-      {/* <Hero /> */}
-      {/* <AboutUs /> */}
-      <ProjectComp />
+      <Hero />
+      <AboutUs />
+      {/* <ProjectComp /> */}
       <Solutions />
       <StatsKey />
-      {/* <OurPartners /> */}
+      <OurPartners />
       {/* <Industries /> */}
       <Credibility />
       <Questions />
