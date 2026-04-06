@@ -22,11 +22,11 @@ export default function Home() {
     <main>
       <Header />
       {/* <Hero /> */}
-      <AboutUs />
+      {/* <AboutUs /> */}
       <ProjectComp />
       <Solutions />
       <StatsKey />
-      <OurPartners />
+      {/* <OurPartners /> */}
       <Industries />
       <Credibility />
       <Questions />
